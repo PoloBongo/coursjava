@@ -1,84 +1,39 @@
-console.log("sa marche 1 2 3", true, false)
-
-// ................
-
-var test = "coucou";
-const test1 = "coucou1";
-let test2 = "coucou2";
-test2="coucou3";
-
-let maths = [10, 11, 12, 13];
-
-console.log(maths)
-console.log(maths[2])
-
-
-let firstname = "Polo";
-let lastname = "Bongo";
-
-let message = 'Bonjour' + " " + firstname + " " + lastname;
-console.log(message)
-
-let money = (maths[0] + maths[1] + maths[2]) / maths.length;
-console.log(money)
-
-if (money >= 6) {
-    console.log("super");
-} else if (money >= 8) {;
-console.log("bof")
-}
-else {
-    console.log("t es naze")
-}
-
-let tableau = [14, 26, 36, 46];
-console.log(tableau);
-
-let tableau2 = (tableau[0] + tableau[1] + tableau[2] + tableau[3]) / tableau.length;
-console.log(tableau2)
-
-if (tableau2 < 36) {
-    console.log("la personne est vielle");
-}
-
-let oui = document.querySelector('#js-oui');
-console.log(oui);
-
-let clickoui = oui.addEventListener('click', () => {
-    let alerte = document.scripts;
-
-    if (alerte.length) {
-      alert('Voulez-vous vraiment allez sur cette page qui n\'ai pas sécuriser ?');
-    }
-    console.log("OUI")
-})
-
-let non = document.querySelector('#js-non');
-console.log(non);
-
-let clicknon = non.addEventListener('click', () => {
-    let b = document.body;
-    let newP = document.createElement('p')
-
-    newP.textContent = 'paragraphe'
-
-    b.prepend(newP)
-
-    console.log("NON")
-})
-
 let field = document.getElementById("app-field");
 let btn = document.getElementById("app-btn");
 let listItems = document.getElementById("app-listItems");
 
 btn.addEventListener("click", ()=> {
-    let b = document.body;
     let text = field.value;
-    let liste = document.createElement('ul');
+    let liste = document.createElement("li");
+    let textnode = document.createTextNode(text);
+    liste.appendChild(textnode);
+    document.getElementById("app-listItems").appendChild(liste);
 
-    b.prepend("\n", text, liste);
-    
-    console.log(text);
+    console.log(text)
 
-    delete app-field;
 })
+
+var input = document.getElementById("app-field"); // id qui renvoie le la valeur dans l'input
+
+input.addEventListener("keypress", function(event) { // event key pressé
+    if (event.key === "Enter") { // si l'utilisateur appuie sur entrer
+        event.preventDefault();
+        document.getElementById("app-btn").click();
+    }
+});
+
+window.addEventListener('DOMContentLoaded', function(){
+    var f = document.getElementById('data');
+  
+    colors = ['catégorie 1', 'catégorie 2', 'catégorie 3', 'catégorie 4'];
+  
+    var combo = document.createElement('select');
+  
+    while(colors.length)
+    {
+        var couleur = colors.pop();
+        var opt = new Option(couleur, couleur);
+        combo.options[combo.options.length] = opt;
+    }
+    f.appendChild(combo);
+  });

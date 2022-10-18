@@ -1,29 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/310ee3b022.js" crossorigin="anonymous"></script>
     <title>JavaSript</title>
 </head>
+
 <body>
     <h1>Indroduction</h1>
-    <div class="btn_container">
-        <button id="js-oui">OUI</button>
-        <button id="js-non">NON</button>
+    <div class="col-lg-4 col-md-4 col-12">
+        <div class="card">
+            <div class="card-header mt-0">
+                <div class="card-body">
+                    <input type="text" placeholder="Entrer une tâche" id="app-field">
+                    <input type="button" value="OK" id="app-btn">
+                    <ul id="app-listItems">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=2.236822843551636%2C48.88945346270764%2C2.2457814216613774%2C48.89256433838695&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=18/48.89101/2.24130">Afficher une carte plus grande</a></small>
-    <br><br><br><br><br>
-
-    <input type="text" placeholder="Entrer le nom" id="app-field">
+    <div id="container"></div>
+    <br>
+    <form name="data" id="data"></form>
     <input type="button" value="OK" id="app-btn">
-    <ul id="app-listItems">
-
-
-    </ul>
-
 
     <script src="/main.js"></script>
 </body>
+
 </html>
