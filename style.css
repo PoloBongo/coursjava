@@ -1,19 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
-    box-sizing: border-box;
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 100px;
+    color: seagreen;
 }
 
 input {
-    background-color: rgb(206, 222, 223);
+    border-radius: 1rem;
+    border: none;
+    font-size: 1rem;
+}
+
+input:focus-visible {
+    outline: none;
+}
+input[type="text"] {
+    padding: 1rem .5rem;
+    border: 2px solid pink;
+}
+
+input::placeholder {
+    font-size: 1rem;   
+    text-align: center; 
+}
+
+input[type="button"] {
+    padding: 1rem 2rem;
+    background-color: pink;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: .5s; /* tjrs sur parent et transtion: background*/
+}
+
+input[type="button"]:hover {
+    background-color: rgb(238, 96, 120);
 }
 
 ul {
+    padding: 0;
     list-style-type: none;
-    position: relative;
-    left: -40px;
+}
+#app-listItems {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-#app-listItems {
-    left: -60px; /* quand on appuie sur entrer sa met le text à gauche */
-    top: 10px; /* quand on appuie sur entrer sa ne les colle pas ( espace entre eux ) */
+#app-listItems2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#app-listItems3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.dropdown {
+    display: flex;
+    left: 205px;
+    top: -47px;
 }
